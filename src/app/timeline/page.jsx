@@ -1,4 +1,11 @@
-const Timeline = () => {
-  return <div>Timeline</div>;
+import Timeline from "./TimeLine";
+
+// metadata
+export const metadata = {
+  title: "Timeline | KeenKeeper",
+  description: "Show history of all interactions",
 };
-export default Timeline;
+const page = () => {
+  return <Timeline />;
+};
+export default page;

@@ -15,7 +15,7 @@ const Banner = () => {
           <FaPlus /> Add a Friend
         </button>
       </div>
-      <div className="grid gap-6 *:w-full *:h-full place-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid gap-4 *:w-full *:h-full place-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         <div className="card bg-base-100 shadow-sm p-8 text-center">
           <p className="text-success-content font-semibold text-3xl/relaxed">
             10

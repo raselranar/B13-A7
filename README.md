@@ -134,13 +134,13 @@ When a user clicks **Call**, **Text**, or **Video** in the Quick Check-In Card:
 
 ✅ A **new timeline entry** is automatically added with:
 
-- [ ] The **current date**
-- [ ] A **title** like:
-  - [ ] "Call with Alex Johnson"
-  - [ ] "Text with Alex Johnson"
-  - [ ] "Video with Alex Johnson"
+- [x] The **current date**
+- [x] A **title** like:
+  - [x] "Call with Alex Johnson"
+  - [x] "Text with Alex Johnson"
+  - [x] "Video with Alex Johnson"
 
-- [ ] ✅ A **toast notification** must appear when any of these buttons is clicked.
+- [x] ✅ A **toast notification** must appear when any of these buttons is clicked.
 
 ---
 
@@ -150,9 +150,9 @@ This page shows the **history of all interactions** (calls, texts, video calls) 
 
 **This page must have:**
 
-- [ ] A **"Timeline"** heading at the top
-- [ ] Timeline entries displayed following the Figma design
-- [ ] Each entry must show:
+- [x] A **"Timeline"** heading at the top
+- [x] Timeline entries displayed following the Figma design
+- [x] Each entry must show:
 
 | Field    | Details                                   |
 | -------- | ----------------------------------------- |

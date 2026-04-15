@@ -3,6 +3,7 @@ import "./globals.css";
 import NavBar from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
 import FriendsProvider from "@/context/FriendsProvider";
+import { ToastContainer, Zoom } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,19 @@ export default function RootLayout({ children }) {
           <main className="container my-8  mx-auto px-4 ">{children}</main>
         </FriendsProvider>
         <Footer />
+        <ToastContainer
+          position="top-center"
+          autoClose={2000}
+          hideProgressBar
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+          transition={Zoom}
+        />
       </body>
     </html>
   );

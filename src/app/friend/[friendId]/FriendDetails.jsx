@@ -8,11 +8,11 @@ import { PiArchiveDuotone } from "react-icons/pi";
 import { FiPhoneCall } from "react-icons/fi";
 import { LiaCommentDots } from "react-icons/lia";
 import { HiOutlineVideoCamera } from "react-icons/hi";
+import { toast } from "react-toastify";
 
 const FriendDetails = ({ friendId }) => {
-  const { friendsData, loading } = useFriendsData();
+  const { friendsData, loading, setTimeLines } = useFriendsData();
   if (loading) return <Loading />;
-  console.log({ id: friendId, friendsData, loading });
   const {
     name,
     picture,
@@ -31,8 +31,25 @@ const FriendDetails = ({ friendId }) => {
     "almost due": "bg-yellow-500",
   };
 
+  // handle click
+  const handleCheckIn = (type, name) => {
+    const action = type.charAt(0).toUpperCase() + type.slice(1);
+    const date = new Date();
+    const formattedDate = date.toLocaleDateString("en-Us", {
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    });
+    toast.success(`${action} with ${name}`);
+    setTimeLines((prev) => [
+      ...prev,
+      { formattedDate, title: action, type, name },
+    ]);
+  };
+
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+    <section className="grid grid-cols-1 sm:grid-cols-3 gap-4">
       {/* friend info card left column */}
       <div className="">
         <div className="card bg-base-100 shadow-sm py-4">
@@ -61,24 +78,24 @@ const FriendDetails = ({ friendId }) => {
               <em>{`"${bio}"`}</em>
             </p>
             {/* email */}
-            <p className="text-gray-500 text-center">Email: {email}</p>
+            <p className="text-gray-500 text-center">{email}</p>
           </div>
         </div>
         {/* action Buttons */}
         <div className="flex gap-2 flex-col mx-auto mt-2">
-          <button className="btn btn-block font-medium text-base">
+          <button className="btn btn-block bg-base-100 font-medium text-base">
             <RiNotificationSnoozeLine /> Snooze 2 weeks
           </button>
-          <button className="btn btn-block font-medium text-base">
+          <button className="btn btn-block bg-base-100 font-medium text-base">
             <PiArchiveDuotone /> Archive
           </button>
-          <button className="btn btn-block font-medium text-red-400 text-base">
+          <button className="btn btn-block bg-base-100 font-medium text-red-400 text-base">
             <RiDeleteBinLine /> Delete
           </button>
         </div>
       </div>
       {/* more info right column */}
-      <div className="col-span-2 space-y-6">
+      <div className="sm:col-span-2 space-y-6">
         {/* Stats Cards */}
         <div className="grid gap-6 *:w-full *:h-full place-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           <div className="card bg-base-100 shadow-sm p-8 text-center">
@@ -102,11 +119,11 @@ const FriendDetails = ({ friendId }) => {
         </div>
         {/* Relationship Goal Card */}
         <div className="card bg-base-100 shadow-sm">
-          <div className="flex justify-between p-4">
+          <div className="flex justify-between items-center p-4">
             <h4 className="font-medium text-xl/snug text-success-content">
               Relationship Goal
             </h4>
-            <button className="btn">Edit</button>
+            <button className="btn rounded-xl">Edit</button>
           </div>
           <div className="p-4">
             <p className="text-lg">
@@ -120,25 +137,31 @@ const FriendDetails = ({ friendId }) => {
           <h4 className="font-medium text-xl/snug text-success-content mb-4">
             Quick Check-In
           </h4>
-          <div className="grid gap-6 *:w-2/3 *:h-full place-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="card shadow-sm p-8 items-center gap-4">
+          <div className="grid gap-4 place-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 pb-2">
+            <button
+              onClick={() => handleCheckIn("call", name)}
+              className="shadow-sm btn flex-col btn-block gap-4 h-full p-8 ">
               <p className="text-3xl">
                 <FiPhoneCall />
               </p>
               <h3 className="text-gray-500 text-lg">Call</h3>
-            </div>
-            <div className="card shadow-sm p-8 items-center gap-4">
+            </button>
+            <button
+              onClick={() => handleCheckIn("text", name)}
+              className="btn flex-col btn-block shadow-sm p-8 h-full gap-4">
               <p className="text-3xl">
                 <LiaCommentDots />
               </p>
               <h3 className="text-gray-500 text-lg">Text</h3>
-            </div>
-            <div className="card shadow-sm p-8 items-center gap-4">
+            </button>
+            <button
+              onClick={() => handleCheckIn("video", name)}
+              className="btn flex-col btn-block h-full shadow-sm p-8 gap-4">
               <p className="text-3xl">
                 <HiOutlineVideoCamera />
               </p>
               <h3 className="text-gray-500 text-lg">Video</h3>
-            </div>
+            </button>
           </div>
         </div>
       </div>
