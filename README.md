@@ -91,12 +91,12 @@ This page should have a **two-column layout** (follow the Figma design).
 
 Show the following details:
 
-- [ ] Profile picture
-- [ ] Name
-- [ ] Status (with color)
-- [ ] Tags
-- [ ] Bio
-- [ ] Email
+- [x] Profile picture
+- [x] Name
+- [x] Status (with color)
+- [x] Tags
+- [x] Bio
+- [x] Email
 
 Also add these **3 action buttons** (no functionality required for these buttons):
 
@@ -112,18 +112,18 @@ Also add these **3 action buttons** (no functionality required for these buttons
 
 **① Stats Cards (show 3 cards):**
 
-- [ ] Days Since Contact
-- [ ] Goal (in days)
-- [ ] Next Due Date
+- [x] Days Since Contact
+- [x] Goal (in days)
+- [x] Next Due Date
 
 **② Relationship Goal Card:**
 
-- [ ] Show the current contact goal
-- [ ] Add an **Edit** button
+- [x] Show the current contact goal
+- [x] Add an **Edit** button
 
 **③ Quick Check-In Card:**
 
-- [ ] Add 3 buttons with icons: **Call**, **Text**, **Video**
+- [x] Add 3 buttons with icons: **Call**, **Text**, **Video**
 - [ ] When clicked, each button adds a new entry to the **Timeline** (see Section 6)
 
 ---

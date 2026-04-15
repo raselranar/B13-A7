@@ -7,7 +7,7 @@ const FriendsProvider = ({ children }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("./friends.json");
+        const res = await fetch("/friends.json");
         const data = await res.json();
         setFriendsData(data);
       } catch (err) {
