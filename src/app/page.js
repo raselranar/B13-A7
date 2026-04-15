@@ -1,9 +1,11 @@
 import Banner from "@/components/UI/Banner";
+import FriendsSection from "./FriendsSection";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Banner />
-    </div>
+      <FriendsSection />
+    </>
   );
 }

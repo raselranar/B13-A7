@@ -57,7 +57,7 @@ const NavBar = () => {
           </div>
           <a className="btn btn-ghost text-xl gap-0">
             <span>Keen</span>
-            <span className="text-secondary">Keeper</span>
+            <span className="text-success-content">Keeper</span>
           </a>
         </div>
         <div className="navbar-end hidden lg:flex">

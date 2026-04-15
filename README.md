@@ -33,9 +33,9 @@
 
 **Banner Section (Top of the Home page):**
 
-- [ ] Show a centered **title** and **subtitle**
-- [ ] Add a **button with an icon** (e.g., "Add a Friend")
-- [ ] Show **4 summary cards below the banner**, following the Figma design
+- [x] Show a centered **title** and **subtitle**
+- [x] Add a **button with an icon** (e.g., "Add a Friend")
+- [x] Show **4 summary cards below the banner**, following the Figma design
 
 ---
 
@@ -67,19 +67,19 @@ Each friend object must have these fields:
 
 ### 4. 👫 Your Friends Section (Home Page)
 
-- [ ] Display all friends from your JSON file as cards, following the Figma design
-- [ ] **Each card must show:**
+- [x] Display all friends from your JSON file as cards, following the Figma design
+- [x] **Each card must show:**
 
-- [ ] | Field | Details |
-- [ ] |---|---|
-- [ ] | 📸 Picture | Friend's photo |
-- [ ] | 🧑 Name | Friend's full name |
-- [ ] | 📅 Days Since Contact | How many days ago you contacted them |
-- [ ] | 🏷️ Tags | e.g., "college", "work" |
-- [ ] | 🔴 Status | Background color changes based on status (match Figma) |
+- [x] | Field | Details |
+- [x] |---|---|
+- [x] | 📸 Picture | Friend's photo |
+- [x] | 🧑 Name | Friend's full name |
+- [x] | 📅 Days Since Contact | How many days ago you contacted them |
+- [x] | 🏷️ Tags | e.g., "college", "work" |
+- [x] | 🔴 Status | Background color changes based on status (match Figma) |
 
-- [ ] Cards must be shown in a **4-column grid layout on large screens**
-- [ ] Clicking a card must navigate the user to that friend's **Detail Page**
+- [x] Cards must be shown in a **4-column grid layout on large screens**
+- [x] Clicking a card must navigate the user to that friend's **Detail Page**
 
 ---
 

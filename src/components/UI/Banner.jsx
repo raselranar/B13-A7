@@ -16,25 +16,25 @@ const Banner = () => {
         </button>
       </div>
       <div className="grid gap-6 place-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        <div className="text-center">
+        <div className="card bg-base-100 shadow-sm p-8 text-center">
           <p className="text-success-content font-semibold text-3xl/relaxed">
             10
           </p>
           <h3 className="text-gray-500 text-lg">Total Friends</h3>
         </div>
-        <div className="text-center">
+        <div className="card bg-base-100 shadow-sm p-8 text-center">
           <p className="text-success-content font-semibold text-3xl/relaxed">
             3
           </p>
           <h3 className="text-gray-500 text-lg">On Track</h3>
         </div>
-        <div className="text-center">
+        <div className="card bg-base-100 shadow-sm p-8 text-center">
           <p className="text-success-content font-semibold text-3xl/relaxed">
             6
           </p>
           <h3 className="text-gray-500 text-lg">Need Attention</h3>
         </div>
-        <div className="text-center">
+        <div className="card bg-base-100 shadow-sm p-8 text-center">
           <p className="text-success-content font-semibold text-3xl/relaxed">
             12
           </p>
