@@ -27,11 +27,13 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} h-full antialiased`}>
       <body
-        className={`${geistSans.className} min-h-full flex flex-col bg-base-200`}>
+        className={`${geistSans.className} min-h-screen flex flex-col bg-base-200`}>
         {/* nav bar in all pages */}
         <NavBar />
         <FriendsProvider>
-          <main className="container my-8  mx-auto px-4 ">{children}</main>
+          <main className="container my-8  mx-auto px-4 flex-1 flex flex-col">
+            {children}
+          </main>
         </FriendsProvider>
         <Footer />
         <ToastContainer

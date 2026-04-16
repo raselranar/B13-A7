@@ -12,7 +12,7 @@ const Timeline = () => {
     setFilterQuery(e.target.value);
   };
   return (
-    <section className="space-x-6">
+    <section className="space-x-6 flex-1 flex flex-col">
       <h2 className="text-5xl/normal font-bold">Timeline</h2>
       {/* filter */}
       <select
@@ -27,7 +27,7 @@ const Timeline = () => {
         <option value="video">Video</option>
       </select>
       {/*  history of all interactions */}
-      <ul className="list rounded-box shadow-none mt-6 gap-4">
+      <ul className="list rounded-box shadow-none mt-6 gap-4 flex-1">
         {<HistoryList timeLines={timeLines} filterQuery={filterQuery} />}
       </ul>
     </section>

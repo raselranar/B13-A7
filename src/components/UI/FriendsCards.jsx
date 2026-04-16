@@ -17,7 +17,7 @@ const Card = ({ friend }) => {
   //   statusStyleClass = "";
   return (
     <Link href={`/friend/${id}`}>
-      <div className="card bg-base-100 shadow-sm py-6">
+      <div className="card bg-base-100 h-full shadow-sm py-6">
         <figure>
           <Image
             width={90}
