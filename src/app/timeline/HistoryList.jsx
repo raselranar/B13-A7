@@ -2,7 +2,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import { HiOutlineVideoCamera } from "react-icons/hi";
 import { LiaCommentDots } from "react-icons/lia";
 
-const HistoryList = ({ timeLines, filterQuery }) => {
+const HistoryList = ({ data, filterQuery }) => {
   const icon = {
     call: <FiPhoneCall />,
     text: <LiaCommentDots />,
@@ -10,7 +10,7 @@ const HistoryList = ({ timeLines, filterQuery }) => {
   };
 
   // filter timeline
-  const filteredTimeline = timeLines.filter(({ type }) =>
+  const filteredTimeline = data.filter(({ type }) =>
     filterQuery ? type === filterQuery : true,
   );
 

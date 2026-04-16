@@ -1,5 +1,11 @@
 import Chart from "./PieChart";
 
+// metadata
+export const metadata = {
+  title: "Stats | KeenKeeper",
+  description: "Show Friendship Analytics",
+};
+
 const Stats = () => {
   return (
     <section className="space-x-6 flex-1 flex flex-col">

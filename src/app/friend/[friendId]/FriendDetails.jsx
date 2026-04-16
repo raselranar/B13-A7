@@ -44,7 +44,7 @@ const FriendDetails = ({ friendId }) => {
     toast.success(`${action} with ${name}`);
     setTimeLines((prev) => [
       ...prev,
-      { formattedDate, title: action, type, name },
+      { date, formattedDate, title: action, type, name },
     ]);
   };
 
