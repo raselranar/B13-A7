@@ -26,7 +26,7 @@ const HistoryList = ({ data, filterQuery }) => {
   return filteredTimeline.map(({ formattedDate, title, type, name }, i) => (
     <li key={i} className="list-row flex items-center shadow-sm bg-base-100">
       <div className="text-2xl">{icon[type]}</div>
-      <div className="font-medium text-gray-500 text-xl">
+      <div className="font-medium text-gray-500 text-base sm:text-xl">
         <div>
           <span className="text-success-content">{title}</span> with {name}
         </div>

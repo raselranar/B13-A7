@@ -95,22 +95,24 @@ const FriendDetails = ({ friendId }) => {
         {/* Stats Cards */}
         <div className="grid gap-6 *:w-full *:h-full place-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           <div className="card bg-base-100 shadow-sm p-8 text-center">
-            <p className="text-success-content font-semibold text-3xl/relaxed">
+            <p className="text-success-content font-semibold text-2xl sm:text-3xl/relaxed">
               {days_since_contact}
             </p>
-            <h3 className="text-gray-500 text-lg">Days Since Contact</h3>
+            <h3 className="text-gray-500 text-base sm:text-lg">
+              Days Since Contact
+            </h3>
           </div>
           <div className="card bg-base-100 shadow-sm p-8 text-center">
-            <p className="text-success-content font-semibold text-3xl/relaxed">
+            <p className="text-success-content font-semibold text-2xl sm:text-3xl/relaxed">
               3
             </p>
-            <h3 className="text-gray-500 text-lg">Goal (Days)</h3>
+            <h3 className="text-gray-500 text-base sm:text-lg">Goal (Days)</h3>
           </div>
           <div className="card bg-base-100 shadow-sm p-8 text-center">
-            <p className="text-success-content font-semibold text-3xl/relaxed">
+            <p className="text-success-content font-semibold text-2xl sm:text-3xl/relaxed">
               {dateFormat(new Date(next_due_date))}
             </p>
-            <h3 className="text-gray-500 text-lg">Next Due</h3>
+            <h3 className="text-gray-500 text-base sm:text-lg">Next Due</h3>
           </div>
         </div>
         {/* Relationship Goal Card */}
@@ -140,7 +142,7 @@ const FriendDetails = ({ friendId }) => {
               <p className="text-3xl">
                 <FiPhoneCall />
               </p>
-              <h3 className="text-gray-500 text-lg">Call</h3>
+              <h3 className="text-gray-500 text-base sm:text-lg">Call</h3>
             </button>
             <button
               onClick={() => handleCheckIn("text", name)}
@@ -148,7 +150,7 @@ const FriendDetails = ({ friendId }) => {
               <p className="text-3xl">
                 <LiaCommentDots />
               </p>
-              <h3 className="text-gray-500 text-lg">Text</h3>
+              <h3 className="text-gray-500 text-base sm:text-lg">Text</h3>
             </button>
             <button
               onClick={() => handleCheckIn("video", name)}
@@ -156,7 +158,7 @@ const FriendDetails = ({ friendId }) => {
               <p className="text-3xl">
                 <HiOutlineVideoCamera />
               </p>
-              <h3 className="text-gray-500 text-lg">Video</h3>
+              <h3 className="text-gray-500 text-base sm:text-lg">Video</h3>
             </button>
           </div>
         </div>
