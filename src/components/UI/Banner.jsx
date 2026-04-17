@@ -2,10 +2,12 @@ import { FaPlus } from "react-icons/fa6";
 
 const Banner = () => {
   return (
-    <section className="mt-12 mb-20">
+    <section className="mt-12">
       <div className="space-y-4 text-center">
-        <h2 className="text-5xl">Friends to keep close in your life</h2>
-        <p className="text-gray-500 text-center">
+        <h2 className="text-3xl sm:text-5xl">
+          Friends to keep close in your life
+        </h2>
+        <p className="text-gray-500 max-w-xl mx-auto">
           Your personal shelf of meaningful connections. Browse, tend, and
           nurture the relationships that matter most.
         </p>

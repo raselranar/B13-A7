@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <>
       <Banner />
+      <div className="divider my-15"></div>
       <FriendsSection />
     </>
   );

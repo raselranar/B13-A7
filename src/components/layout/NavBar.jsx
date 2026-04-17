@@ -31,10 +31,10 @@ const NavBar = () => {
   );
   return (
     <div className="shadow-md sticky top-0 z-10">
-      <div className="navbar bg-base-100 container mx-auto">
-        <div className="navbar-start">
+      <div className="navbar justify-between bg-base-100 container mx-auto">
+        <div className="navbar-start w-fit">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost sm:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -46,7 +46,7 @@ const NavBar = () => {
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
+                />
               </svg>
             </div>
             <ul
@@ -60,7 +60,7 @@ const NavBar = () => {
             <span className="text-success-content">Keeper</span>
           </a>
         </div>
-        <div className="navbar-end hidden lg:flex">
+        <div className="navbar-end  w-fit hidden sm:flex">
           <ul className="menu menu-horizontal px-1 gap-1">{links}</ul>
         </div>
       </div>

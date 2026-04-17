@@ -1,6 +1,5 @@
 "use client";
 import { useFriendsData } from "@/context/FriendsProvider";
-import Image from "next/image";
 import HistoryList from "./HistoryList";
 import { useState } from "react";
 
@@ -21,18 +20,18 @@ const Timeline = () => {
     );
 
   // sort data
-  if (sort === "new") data.sort((a, b) => a.date - b.date);
-  if (sort === "old") data.sort((a, b) => b.date - a.date);
+  if (sort === "old") data.sort((a, b) => a.date - b.date);
+  if (sort === "new") data.sort((a, b) => b.date - a.date);
 
   return (
     <section className="space-x-6 flex-1 flex flex-col">
-      <h2 className="text-5xl/normal font-bold">Timeline</h2>
+      <h2 className="text-3xl/snug sm:text-5xl/normal font-bold">Timeline</h2>
       {/* filter */}
       <div className="flex gap-2 flex-wrap">
         <select
           onChange={(e) => setFilterQuery(e.target.value)}
           value={filterQuery}
-          className="select text-lg text-gray-500">
+          className="select text-sm sm:text-base text-gray-500">
           <option value="" disabled={true}>
             Filter timeline
           </option>
@@ -45,7 +44,7 @@ const Timeline = () => {
         <select
           onChange={(e) => setSort(e.target.value)}
           value={sort}
-          className="select text-lg text-gray-500">
+          className="select text-sm sm:text-base text-gray-500">
           <option value="" disabled={true}>
             Sort by
           </option>
@@ -72,7 +71,7 @@ const Timeline = () => {
           <input
             type="search"
             onChange={(e) => setSearch(e.target.value)}
-            className="text-lg"
+            className="text-sm sm:text-base"
             placeholder="Search"
           />
         </label>

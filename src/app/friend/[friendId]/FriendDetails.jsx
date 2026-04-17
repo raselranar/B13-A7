@@ -9,6 +9,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import { LiaCommentDots } from "react-icons/lia";
 import { HiOutlineVideoCamera } from "react-icons/hi";
 import { toast } from "react-toastify";
+import { dateFormat } from "@/utils/dateFormat";
 
 const FriendDetails = ({ friendId }) => {
   const { friendsData, loading, setTimeLines } = useFriendsData();
@@ -35,12 +36,7 @@ const FriendDetails = ({ friendId }) => {
   const handleCheckIn = (type, name) => {
     const action = type.charAt(0).toUpperCase() + type.slice(1);
     const date = new Date();
-    const formattedDate = date.toLocaleDateString("en-Us", {
-      weekday: "long",
-      month: "long",
-      day: "numeric",
-      year: "numeric",
-    });
+    const formattedDate = dateFormat(date);
     toast.success(`${action} with ${name}`);
     setTimeLines((prev) => [
       ...prev,
@@ -49,7 +45,7 @@ const FriendDetails = ({ friendId }) => {
   };
 
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {/* friend info card left column */}
       <div className="">
         <div className="card bg-base-100 shadow-sm py-4">
@@ -95,7 +91,7 @@ const FriendDetails = ({ friendId }) => {
         </div>
       </div>
       {/* more info right column */}
-      <div className="sm:col-span-2 space-y-6">
+      <div className="md:col-span-2 space-y-6">
         {/* Stats Cards */}
         <div className="grid gap-6 *:w-full *:h-full place-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           <div className="card bg-base-100 shadow-sm p-8 text-center">
@@ -112,7 +108,7 @@ const FriendDetails = ({ friendId }) => {
           </div>
           <div className="card bg-base-100 shadow-sm p-8 text-center">
             <p className="text-success-content font-semibold text-3xl/relaxed">
-              {next_due_date}
+              {dateFormat(new Date(next_due_date))}
             </p>
             <h3 className="text-gray-500 text-lg">Next Due</h3>
           </div>
@@ -126,8 +122,8 @@ const FriendDetails = ({ friendId }) => {
             <button className="btn rounded-xl">Edit</button>
           </div>
           <div className="p-4">
-            <p className="text-lg">
-              <span className="text-gray-400">Connect every</span>{" "}
+            <p className="text-lg flex gap-4">
+              <span className="text-gray-400">Connect every</span>
               <b>30 days</b>
             </p>
           </div>
