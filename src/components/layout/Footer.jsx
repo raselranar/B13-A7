@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
         <div className="divider before:bg-gray-50/20 after:bg-gray-50/20 before:h-px after:h-px"></div>
         {/* copy right */}
-        <div className="text-gray-400 flex flex-wrap justify-between gap-4">
+        <div className="text-gray-400  flex flex-wrap justify-center sm:justify-between gap-4">
           <p>© 2026 KeenKeeper. All rights reserved.</p>
           <ul className="flex gap-3 flex-wrap">
             <li>Privacy Policy</li>
