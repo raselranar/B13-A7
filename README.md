@@ -7,7 +7,7 @@ It tracks your interactions with friends and reminds you when it’s time to rec
 
 ## Live Demo
 
-🔗 https://your-live-link.com
+🔗 https://b13-a7-keen-keeper-iota.vercel.app
 
 ---
 
@@ -45,13 +45,12 @@ KeenKeeper helps you stay connected by tracking communication history and remind
 ### 3. Friendship Analytics
 
 - Visual pie chart of interactions (Call / Text / Video)
-- Helps understand communication patterns
 
 ---
 
 ## Pages Included
 
-- Home Page (Friends + Summary)
+- Home Page
 - Friend Details Page
 - Timeline Page (Interaction History)
 - Stats Page (Analytics)
@@ -73,7 +72,4 @@ Fully responsive and works perfectly on:
 
 - Filter timeline by interaction type
 - Loading animation while fetching data
-- Smooth navigation without reload errors
-- Clean and modern UI (based on Figma design)
-
 ---
