@@ -7,7 +7,7 @@ It tracks your interactions with friends and reminds you when it’s time to rec
 
 ## Live Demo
 
-🔗 https://b13-a7-keen-keeper-iota.vercel.app
+🔗 https://keen-keeper-iotar.vercel.app
 
 ---
 
